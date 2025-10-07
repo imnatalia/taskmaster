@@ -37,4 +37,11 @@ public class Task {
     @JoinColumn(name = "user_id")
     @JsonBackReference
     User user;
+
+    public Task(String title, String description, String category, LocalDate limitDate) {
+        this.title = title;
+        this.description = description;
+        this.category = category;
+        this.limitDate = limitDate;
+    }
 }
